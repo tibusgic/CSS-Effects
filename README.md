@@ -8,16 +8,6 @@ Un studio professionnel d'effets CSS avec plus de **35 animations et effets visu
 
 CSS Effects Studio est une collection complète d'effets visuels CSS purs, organisée dans une interface moderne et intuitive. Parfait pour les développeurs web qui souhaitent ajouter des animations impressionnantes à leurs projets.
 
-### ✨ Fonctionnalités
-
-- **35+ Effets CSS** répartis en 3 catégories
-- **Interface moderne** avec design glassmorphisme
-- **Système de recherche** et filtres par catégorie
-- **Export CSS personnalisé** des effets sélectionnés
-- **Responsive design** pour tous les appareils
-- **Mode sombre/clair** 
-- **Aperçu temps réel** de tous les effets
-
 ## 🚀 Effets Disponibles
 
 ### 🔥 Effets de Base
