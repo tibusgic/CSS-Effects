@@ -1,0 +1,51 @@
+{
+  "name": "css-effects-studio",
+  "version": "1.0.0",
+  "description": "Studio professionnel d'effets CSS avec plus de 35 animations et effets visuels avancés",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server .",
+    "dev": "live-server . --port=3000",
+    "build": "echo 'Projet CSS pur - pas de build nécessaire'",
+    "preview": "python -m http.server 8000"
+  },
+  "keywords": [
+    "css",
+    "animations",
+    "effects",
+    "visual-effects",
+    "frontend",
+    "web-design",
+    "css3",
+    "animations-css",
+    "effets-visuels",
+    "glassmorphisme",
+    "neon-effects",
+    "futuristic-ui"
+  ],
+  "author": {
+    "name": "Thibault",
+    "url": "https://github.com/tibusgic"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tibusgic/CSS-Effects.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tibusgic/CSS-Effects/issues"
+  },
+  "homepage": "https://github.com/tibusgic/CSS-Effects#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

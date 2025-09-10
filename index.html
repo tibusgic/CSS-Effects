@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Effects Studio - Effets Visuels Avancés</title>
+  <meta name="description" content="Studio professionnel d'effets CSS avancés - Plus de 40 animations et effets visuels pour vos projets web">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">⚡</div>
+    <h1>CSS Effects Studio</h1>
+    <div class="top-controls">
+      <button class="btn" id="searchBtn">🔍 Recherche</button>
+      <button class="btn export" id="exportBtn">📤 Exporter CSS</button>
+      <button class="btn" id="themeBtn">🌙 Mode Sombre</button>
+      <button class="btn primary" id="previewBtn">👁️ Aperçu</button>
+    </div>
+  </header>
+  
+  <main>
+    <aside class="panel feature-list">
+      <h3>🎨 Effets Disponibles</h3>
+      <div class="stats">
+        <div class="stat">Total: <strong>35</strong></div>
+        <div class="stat">Actifs: <strong id="activeCount">35</strong></div>
+      </div>
+      
+      <div class="controls">
+        <input type="text" class="search-box" placeholder="Rechercher un effet..." id="searchInput">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">Tous</button>
+          <button class="filter-tab" data-filter="animation">Animation</button>
+          <button class="filter-tab" data-filter="glow">Néon</button>
+          <button class="filter-tab" data-filter="3d">3D</button>
+          <button class="filter-tab" data-filter="text">Texte</button>
+        </div>
+      </div>
+
+      <table>
+        <thead><tr><th>Effet</th><th>Type</th><th>Actif</th></tr></thead>
+        <tbody>
+          <tr class="category-header"><td colspan="3">🔥 Effets de Base</td></tr>
+          <tr><td>Texte Glitch</td><td>Texte</td><td><input type="checkbox" data-target="glitch" checked></td></tr>
+          <tr><td>Effet Shimmer</td><td>Animation</td><td><input type="checkbox" data-target="shimmer" checked></td></tr>
+          <tr><td>Radar Rotatif</td><td>3D</td><td><input type="checkbox" data-target="radar" checked></td></tr>
+          <tr><td>Points de Chargement</td><td>Animation</td><td><input type="checkbox" data-target="dots" checked></td></tr>
+          <tr><td>Bordure Néon</td><td>Néon</td><td><input type="checkbox" data-target="glow" checked></td></tr>
+          <tr><td>Barre de Progression</td><td>Animation</td><td><input type="checkbox" data-target="progress" checked></td></tr>
+          <tr><td>Effet de Frappe</td><td>Texte</td><td><input type="checkbox" data-target="typing" checked></td></tr>
+          <tr><td>Cercle Pulsant</td><td>Animation</td><td><input type="checkbox" data-target="pulse" checked></td></tr>
+          <tr><td>Animation Orbitale</td><td>3D</td><td><input type="checkbox" data-target="orbit" checked></td></tr>
+          <tr><td>Lignes d'Onde</td><td>Animation</td><td><input type="checkbox" data-target="waves2" checked></td></tr>
+          <tr><td>Scanner Laser</td><td>Animation</td><td><input type="checkbox" data-target="scanner" checked></td></tr>
+          
+          <tr class="category-header"><td colspan="3">🚀 Effets Avancés</td></tr>
+          <tr><td>Pluie Matrix</td><td>Texte</td><td><input type="checkbox" data-target="matrix" checked></td></tr>
+          <tr><td>Hologramme</td><td>3D</td><td><input type="checkbox" data-target="hologram" checked></td></tr>
+          <tr><td>Boîte Néon</td><td>Néon</td><td><input type="checkbox" data-target="neonbox" checked></td></tr>
+          <tr><td>Système de Particules</td><td>Animation</td><td><input type="checkbox" data-target="particles" checked></td></tr>
+          <tr><td>Métal Liquide</td><td>3D</td><td><input type="checkbox" data-target="liquid" checked></td></tr>
+          <tr><td>Grille Cyber</td><td>Animation</td><td><input type="checkbox" data-target="grid" checked></td></tr>
+          <tr><td>Orbe d'Énergie</td><td>3D</td><td><input type="checkbox" data-target="orb" checked></td></tr>
+          <tr><td>Flux de Données</td><td>Texte</td><td><input type="checkbox" data-target="datastream" checked></td></tr>
+          <tr><td>Champ de Force</td><td>3D</td><td><input type="checkbox" data-target="forcefield" checked></td></tr>
+          <tr><td>Points Quantiques</td><td>Animation</td><td><input type="checkbox" data-target="quantum" checked></td></tr>
+          
+          <tr class="category-header"><td colspan="3">⚡ Effets Futuristes</td></tr>
+          <tr><td>Propulsion Warp</td><td>3D</td><td><input type="checkbox" data-target="warp" checked></td></tr>
+          <tr><td>Réseau Neural</td><td>Animation</td><td><input type="checkbox" data-target="neural" checked></td></tr>
+          <tr><td>Pluie Binaire</td><td>Texte</td><td><input type="checkbox" data-target="binary" checked></td></tr>
+          <tr><td>Faisceau Laser</td><td>Animation</td><td><input type="checkbox" data-target="laser" checked></td></tr>
+          <tr><td>Générateur de Bouclier</td><td>3D</td><td><input type="checkbox" data-target="shield" checked></td></tr>
+          <tr><td>Cœur de Plasma</td><td>3D</td><td><input type="checkbox" data-target="plasma" checked></td></tr>
+          <tr><td>Faille Dimensionnelle</td><td>3D</td><td><input type="checkbox" data-target="rift" checked></td></tr>
+          <tr><td>Circuit Imprimé</td><td>Animation</td><td><input type="checkbox" data-target="circuit" checked></td></tr>
+          <tr><td>Distorsion Temporelle</td><td>3D</td><td><input type="checkbox" data-target="timewarp" checked></td></tr>
+          <tr><td>Puits Gravitationnel</td><td>3D</td><td><input type="checkbox" data-target="gravity" checked></td></tr>
+          <tr><td>Champ Electromagnétique</td><td>Animation</td><td><input type="checkbox" data-target="electromagnetic" checked></td></tr>
+          <tr><td>Matrice de Code</td><td>Texte</td><td><input type="checkbox" data-target="codematrix" checked></td></tr>
+          <tr><td>Barrière d'Énergie</td><td>Animation</td><td><input type="checkbox" data-target="barrier" checked></td></tr>
+          <tr><td>Champ Quantique</td><td>3D</td><td><input type="checkbox" data-target="quantumfield" checked></td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <section class="panel playground" id="playground">
+      <!-- Effets de base -->
+      <div class="demo" data-category="text"><div class="title">Texte Glitch</div><div class="code-btn">CSS</div><div class="glitch" data-text="GLITCH">GLITCH</div></div>
+      <div class="demo" data-category="animation"><div class="title">Effet Shimmer</div><div class="code-btn">CSS</div><div class="shimmer-text">Shimmer Effect</div></div>
+      <div class="demo" data-category="3d"><div class="title">Radar Rotatif</div><div class="code-btn">CSS</div><div class="radar"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Points de Chargement</div><div class="code-btn">CSS</div><div class="loading-dots">Chargement</div></div>
+      <div class="demo" data-category="glow"><div class="title">Bordure Néon</div><div class="code-btn">CSS</div><div class="glow-border">Bordure Brillante</div></div>
+      <div class="demo" data-category="animation"><div class="title">Barre de Progression</div><div class="code-btn">CSS</div><div class="progress"></div></div>
+      <div class="demo" data-category="text"><div class="title">Effet de Frappe</div><div class="code-btn">CSS</div><div class="typing">console.log('Futuriste!');</div></div>
+      <div class="demo" data-category="animation"><div class="title">Cercle Pulsant</div><div class="code-btn">CSS</div><div class="pulse"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Animation Orbitale</div><div class="code-btn">CSS</div><div class="orbit"><div></div><div></div><div></div></div></div>
+      <div class="demo" data-category="animation"><div class="title">Lignes d'Onde</div><div class="code-btn">CSS</div><div class="wave-lines"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Scanner Laser</div><div class="code-btn">CSS</div><div class="scanner"></div></div>
+      
+      <!-- Nouveaux effets avancés -->
+      <div class="demo" data-category="text"><div class="title">Pluie Matrix</div><div class="code-btn">CSS</div><div class="matrix"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Hologramme</div><div class="code-btn">CSS</div><div class="hologram">HOLOGRAM</div></div>
+      <div class="demo" data-category="glow"><div class="title">Boîte Néon</div><div class="code-btn">CSS</div><div class="neon-box"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Système de Particules</div><div class="code-btn">CSS</div><div class="particle-system"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Métal Liquide</div><div class="code-btn">CSS</div><div class="liquid-metal"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Grille Cyber</div><div class="code-btn">CSS</div><div class="cyber-grid"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Orbe d'Énergie</div><div class="code-btn">CSS</div><div class="energy-orb"></div></div>
+      <div class="demo" data-category="text"><div class="title">Flux de Données</div><div class="code-btn">CSS</div><div class="data-stream"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Champ de Force</div><div class="code-btn">CSS</div><div class="force-field"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Points Quantiques</div><div class="code-btn">CSS</div><div class="quantum-dots"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Propulsion Warp</div><div class="code-btn">CSS</div><div class="warp-drive"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Réseau Neural</div><div class="code-btn">CSS</div><div class="neural-network"></div></div>
+      <div class="demo" data-category="text"><div class="title">Pluie Binaire</div><div class="code-btn">CSS</div><div class="binary-rain"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Faisceau Laser</div><div class="code-btn">CSS</div><div class="laser-beam"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Générateur de Bouclier</div><div class="code-btn">CSS</div><div class="shield-generator"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Cœur de Plasma</div><div class="code-btn">CSS</div><div class="plasma-core"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Faille Dimensionnelle</div><div class="code-btn">CSS</div><div class="dimensional-rift"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Circuit Imprimé</div><div class="code-btn">CSS</div><div class="circuit-board"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Distorsion Temporelle</div><div class="code-btn">CSS</div><div class="time-warp"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Puits Gravitationnel</div><div class="code-btn">CSS</div><div class="gravity-well"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Champ Electromagnétique</div><div class="code-btn">CSS</div><div class="electromagnetic"></div></div>
+      <div class="demo" data-category="text"><div class="title">Matrice de Code</div><div class="code-btn">CSS</div><div class="code-matrix"></div></div>
+      <div class="demo" data-category="animation"><div class="title">Barrière d'Énergie</div><div class="code-btn">CSS</div><div class="energy-barrier"></div></div>
+      <div class="demo" data-category="3d"><div class="title">Champ Quantique</div><div class="code-btn">CSS</div><div class="quantum-field"></div></div>
+    </section>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

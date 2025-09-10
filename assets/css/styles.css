@@ -1,0 +1,346 @@
+/* CSS Effects Studio - Styles Principaux */
+
+/* Import des effets */
+@import url('./effects.css');
+
+:root {
+  --bg: #08101a;
+  --card: #0f1720;
+  --accent: #29f;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --neon: #7afcff;
+  --neon2: #c85cff;
+  --purple: #8b5cf6;
+  --orange: #f97316;
+  --green: #10b981;
+  --red: #ef4444;
+  --yellow: #eab308;
+  --glass-blur: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(120deg, #02040a 0%, #041021 50%, #081018 100%);
+  color: #e6f3ff;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+  padding: 24px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--neon), var(--neon2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo {
+  font-size: 28px;
+  margin-right: 12px;
+}
+
+.top-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), #8f7aff);
+  border: none;
+  box-shadow: 0 8px 32px rgba(50, 150, 255, 0.2);
+}
+
+.btn.export {
+  background: linear-gradient(90deg, var(--green), #059669);
+  border: none;
+}
+
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Panel */
+.feature-list {
+  height: calc(100vh - 120px);
+  overflow: auto;
+  padding: 16px;
+}
+
+.feature-list h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: var(--neon);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.stat {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #dff;
+}
+
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  font-size: 12px;
+  color: var(--neon);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.category-header {
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.category-header td {
+  border: none;
+  padding: 12px 8px;
+}
+
+/* Controls */
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: inherit;
+  font-size: 14px;
+}
+
+.search-box::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.filter-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Playground Grid */
+.playground {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+}
+
+.demo {
+  height: 260px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.demo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
+}
+
+.demo .title {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  font-size: 13px;
+  color: #bfe;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.demo .code-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.demo:hover .code-btn {
+  opacity: 1;
+}
+
+/* Animation d'entrée */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 300px 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .playground {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  
+  .demo {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .feature-list {
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .playground {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  
+  .demo {
+    height: 220px;
+  }
+  
+  header {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .top-controls {
+    gap: 8px;
+  }
+}
